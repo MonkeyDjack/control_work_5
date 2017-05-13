@@ -11,4 +11,22 @@ $(document).ready(function(){
 			}		
 		});
 
+	$('.sub').click(function(){		
+			$('.menu--submenu').slideToggle(400);	
+			if ($(this).hasClass('hide-sub-menu')) {
+				$(this).addClass('show-sub-menu').removeClass('hide-sub-menu');
+			}else{
+				setTimeout(function(){
+					$('show-sub-menu').addClass('hide-sub-menu').removeClass('show-sub-menu')
+				},300)			
+			}		
+		});
+	$('.slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true
+});
+
 });
