@@ -1,0 +1,14 @@
+body { 
+font-family: Arial, sans-serif; 
+font-size: 12px; 
+line-height: 1.6; 
+color: #000; 
+background: #fff; 
+}
+.container{
+	max-width: 1174px;
+	min-width: 320px;
+}
+header{
+	background: #76c7c0 url(../img/line-header.png) 0 100% repeat-x;
+}
