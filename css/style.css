@@ -7,11 +7,67 @@ background: #f3f3f3;
 }
 .container{
 	max-width: 1174px;
-	min-width: 320px;
+	min-width: 380px;
 	margin: 0 auto;
 }
 .header{
 	background: #76c7c0 url(../img/line-header.png) 0 100% repeat-x;
+}
+.not-active{
+	display: none
+}
+.menu-btn {
+    width: 68px;
+    height: 70px;
+    float: right;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    margin-right: 27px;
+}
+.menu-btn span {
+    width: 18px;
+    height: 2px;
+    background: #68a097;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -9px;
+}
+.menu-btn.is-active span {
+    background: transparent;
+}
+.menu-btn span::before,.menu-btn span::after{
+	content: "";
+	width: 18px;
+	height: 2px;
+	background: #e8645a;
+	position: absolute;
+	left: 0;
+	-webkit-transition: -webkit-transform 1s;
+	transition: -webkit-transform 1s;
+	transition: transform 1s;
+	transition: transform 1s, -webkit-transform 1s;
+}
+.menu-btn span::before{
+	top: -5px;
+}
+.menu-btn span::after{
+	bottom: -5px;
+}
+.menu-btn.is-active span{
+	background: transparent;
+}
+.menu-btn.is-active span::before{
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	top: 0;
+} 
+.menu-btn.is-active span::after{
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	bottom: 0;
 }
 .header-wrapper{
 }
@@ -21,13 +77,13 @@ background: #f3f3f3;
 }
 .header_navigator{
 }
-.header_logo--lgtxt{
+.logo--lgtxt{
 	font-family: "OpenSansExtraBold", Sans-serif;
 	font-size: 30px;
 	line-height: 36px;
 	text-transform: uppercase;
 }
-.header_logo--smtxt{
+.logo--smtxt{
 	font-size: 25px;
 	line-height: 30px;
 	font-weight: normal;
@@ -48,9 +104,11 @@ background: #f3f3f3;
 }
 .header_menu_li:hover{
 	background: #e2534b;
+	transition: 0.3s ease-in-out 0.1s
 }
 .header_menu_li:hover .menu_li_links{
 	background: #e8645a;
+	transition: 0.3s ease-in-out 0.1s
 
 }
 .menu_li_links{
@@ -318,7 +376,7 @@ border-color: transparent transparent #e2534b transparent;
 }
 .about-block{
 	background: #ececec url('../img/line-footer.png') 0 0 repeat-x;
-	margin-bottom: 50px;
+	padding-bottom: 50px;
 }
 .about-block_header{
 	text-align: center;
@@ -404,4 +462,116 @@ border-color: transparent #f8f8f8 transparent transparent;
 	font-size: 16px;
 	line-height: 30px;
 	padding-left: 60px;
+}
+.pre-footer-block-wrapper{
+	background: #76c7c0 url(../img/line-footer.png)100% 0 repeat-x;
+	padding-bottom: 45px;
+}
+.pre-footer-block{
+	padding-top: 23px;
+}
+.pre-footer-block_1block{
+	width: 370px;
+	color:#fff;
+	float: left;
+	margin-right: 130px;
+}
+.footer_logo{
+	color:#497e79;
+}
+.pre-footer-block_1block_txt{
+	font-size: 13px;
+	line-height: 23px;
+	color:#fff;
+	margin-bottom: 20px;
+}
+.block_1block_contacts_tags{
+	font-family: "OpenSansRegular";
+	margin-right: 30px;
+	font-size: 13px;
+	line-height: 23px;
+}
+.block_1block_contacts{
+	font-size: 20px;
+	margin: 0;
+	line-height: 31px;
+	font-family: "OpenSansSemiBoldItalic";
+}
+.footer_logo--smtxt{
+	font-size: 25px;
+	line-height: 30px;
+	font-weight: normal;
+	margin: 0;
+	padding: 20px 0 8px 0;
+	padding-left: 9px;
+}
+.pre-footer-block_2block{
+	width: 100px;
+	float:left
+}
+.pre-footer-block_2block_list{
+	list-style: none;
+	padding-left: 0;
+}
+.pre-footer-block_2block_list_li{
+	position: relative;
+	    padding-left: 21px;
+    padding-bottom: 4px;
+    color:#fff;
+}
+.pre-footer-block_2block_list_li:before{
+	content: url(../img/pre-footer-list-arrow.png);
+	position: absolute;
+	top: 0;
+	left:4px;
+}
+.pre-footer-block_2block_h4{
+	font-size: 20px;
+	line-height: 24px;
+	color:#497e79;
+}
+.pre-footer-block_3block_h4{
+	font-family: "OpenSansBold";
+	font-size: 20px;
+	line-height: 24px;
+}
+.pre-footer-block_3block_h4--span{
+	font-family: "OpenSansItalic";
+}
+.pre-footer-block_3block{
+	float:right;
+	width: 374px;
+}
+.pre-footer_blog-posts{
+
+}
+.blog-posts_1post,
+.blog-posts_1post{
+	margin-bottom: 20px;
+}
+.blog-img{
+	float:left;
+	margin-right: 20px;
+}
+.blog_txt,
+ .blog_date{
+	font-size: 13px;
+	line-height: 19px;
+}
+.blog_txt{
+	color:#fff;
+	margin-bottom: 0;
+}
+.blog_date{
+	color:#497e79;
+}
+.footer{
+	background:#dadada;
+}
+.footer_txt{
+	font-size: 12px;
+	line-height: 21px;
+	margin: 0;
+	    padding-top: 17px;
+    padding-bottom: 10px;
 }
